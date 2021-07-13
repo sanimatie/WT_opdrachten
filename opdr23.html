@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-with, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkx(){
+            var countx = 0;
+            var invoerwaarde = document.getElementById("invoer").value;
+            var invoerletter = document.getElementById("letter").value;
+            //loop door alle letters van de input heen
+            for(var i=0; i < invoerwaarde.length; i++){
+                if (invoerwaarde[i] ==  invoerletter){
+                countx++;
+                }
+            }
+           if(countx>0){
+               alert(countx);
+           }
+        }
+    </script>
+</head>
+<body>
+    Miniopdracht 2/3
+    <br>
+    <input type="text" id="invoer">
+    <input type="text" id="letter" maxlength="1">
+    <input type="button" value="tel de letters" onclick="checkx()">
+</body>
+</html>

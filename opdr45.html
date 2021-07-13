@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-with, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    var buttonArr = []
+      function buttonPress(x, buttonid){
+          var clickcount = 0;
+          for (i = 0; i < buttonArr.length; i++){
+              if (buttonArr[i] == buttonid){
+            clickcount++;
+              }
+          }
+        if (clickcount > 0){
+            alert("U heeft al " + clickcount + " keer op " + x + " geklikt");
+        }
+        var divText = document.getElementById("button-history");
+        var buttonHistory = document.getElementById("button-history");
+        //voeg tekst toe aan de innerHTML ipv hem te vervangen met +=
+        divText.innerHTML += "<br> U heeft op " + x + " geklikt";
+        buttonArr.push(buttonid);
+        console.log(buttonArr);
+        }
+    </script>
+</head>
+<body>
+    Miniopdracht 4/5
+    <br>
+    <input id="buttonA" type="button" value="A" onclick="buttonPress('A', this.id)">
+    <input id="buttonB" type="button" value="B" onclick="buttonPress('B', this.id)">
+    <input id="buttonC" type="button" value="C" onclick="buttonPress('C', this.id)">
+    <input id="buttonD" type="button" value="D" onclick="buttonPress('D', this.id)">
+<!-- of buttonPress(this.id) -> dan krijg je de id van de button in javascript -->
+
+    
+    <div id="button-history"></div>
+</body>
+</html>

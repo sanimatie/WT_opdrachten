@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-with, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function doeAlert(){
+    var hetelem = document.getElementById("invoerveld");
+    if (hetelem.value == "hallo"){
+        alert("Welkom");
+    } else if (hetelem.value == "doei"){
+        alert("Tot de volgende keer");
+    }
+        //alert("Alert");
+    }
+    </script>
+</head>
+<body>
+    Miniopdracht 1
+    <br>
+    <input type="text" id="invoerveld">
+    <input type="button" value="submit" onclick=doeAlert()>
+    <br><br>
+</body>
+</html>
